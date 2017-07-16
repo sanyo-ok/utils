@@ -77,7 +77,6 @@ turn_vm_state()
 		( "off" )
 #			if ping -w 2 $VM; then
 #			{
-				timeout 60s ssh $VM '/utils/ibm/was.sh stop; su -lc "db2stop force" db2inst';
 				timeout 10s ssh $VM "shutdown -Ph now";
 #			} fi;
 		;;
